@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Survival Predictor</title>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="app.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        input { margin-bottom: 10px; width: 100px; }
+        button { padding: 5px 15px; }
+        .result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Titanic Survival Predictor</h1>
+    <p>Enter passenger details:</p>
+
+    <label>Pclass: <input type="number" id="pclass" value="3"></label><br>
+    <label>Sex (0=female,1=male): <input type="number" id="sex" value="1"></label><br>
+    <label>Age: <input type="number" id="age" value="30"></label><br>
+    <label>SibSp: <input type="number" id="sibsp" value="0"></label><br>
+    <label>Parch: <input type="number" id="parch" value="0"></label><br>
+    <label>Fare: <input type="number" id="fare" value="32"></label><br>
+    <label>Embarked_C: <input type="number" id="embarked_c" value="0"></label><br>
+    <label>Embarked_Q: <input type="number" id="embarked_q" value="0"></label><br>
+
+    <button id="predictBtn">Predict Survival</button>
+
+    <div class="result" id="result"></div>
+</body>
+</html>
